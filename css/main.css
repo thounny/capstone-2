@@ -348,3 +348,52 @@ sc-text {
 .mc-home {
   width: 100vw;
 }
+
+.mc-project {
+  width: 80vw;
+}
+
+.container-drag-limit {
+  position: fixed;
+  height: 100vh;
+  width: 104vw;
+  top: -2vh;
+  left: -2vw;
+  overlay: hidden;
+  z-index: 10;
+}
+
+/* BOX WINDOW */
+.box-article {
+  background: #bdbdbd;
+  border-left: 2px solid #dfdfdf;
+  border-top: 2px solid #dfdfdf;
+  border-bottom: 2px solid #000000;
+  border-right: 2px solid #000000;
+  display: flex;
+  flex-direction: column;
+  z-index: 90;
+}
+
+.box-article-nav {
+  background: #848484;
+  padding: 5px;
+  height: 26px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  cursor: grab;
+}
+
+.box-article-nav span {
+  font-family: "Inter";
+  font-size: 0.8em;
+  font-weight: 500;
+  color: #bdbdbd;
+}
+
+.box-article-nav img {
+  height: 20px;
+  width: auto;
+}
