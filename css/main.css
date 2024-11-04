@@ -164,4 +164,182 @@ nav {
   border-right: 2px solid #000000;
 }
 
+/* BUTTON CLOCK */
+.w98-cl {
+  border-right: 2px solid #dfdfdf;
+  border-bottom: 2px solid #dfdfdf;
+  border-top: 2px solid #5d5d5d;
+  border-left: 2px solid #5d5d5d;
+  width: 7vw;
+}
 
+/* SEPARATOR */
+.w98-separator-1 {
+  border-right: 2px solid #dfdfdf;
+  background: #a0a0a0;
+  height: clamp(36px, 42px, 48px);
+  width: 3px;
+}
+
+.w98-separator-2 {
+  border-left: 2px solid #dfdfdf;
+  border-top: 2px solid #dfdfdf;
+  border-bottom: 2px solid #5d5d5d;
+  border-right: 2px solid #5d5d5d;
+  height: clamp(30px, 36px, 42px);
+  width: 5px;
+}
+
+/* NAV */
+.nav-social {
+  padding: 0vw 0.25vw 0vw 0.25vw;
+  height: clamp(40px, 46px, 52px);
+  gap: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-rs-btn-container {
+  display: flex;
+  flex-direction: row;
+  padding: 0vw 0.25vw 0vw 0.25vw;
+}
+
+.nav-rs-btn a {
+  height: 44px;
+  width: 44px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+.nav-rs-btn img {
+  height: 36px;
+  width: auto;
+}
+
+.nav-rs-btn:hover {
+  border: 1px dotted #5d5d5d;
+}
+
+/* SIDEBAR CONTAINER */
+.sidebar-container {
+  height: 100vh;
+  width: 20vw;
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  background: #bdbdbd;
+  border-right: 2px solid #000000;
+  overflow-x: hidden;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3vh;
+}
+
+.st0 {
+  fill: #0000ff;
+}
+
+.sc-separator {
+  border-bottom: 2px solid #dfdfdf;
+  background: #a0a0a0;
+  height: 3px;
+  width: 100%;
+}
+
+.sc-logo-cont {
+  width: 70%;
+}
+
+sc-text {
+  font-family: "Helvetica Neue";
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+/* SIDEBAR BUTTON */
+.sidebar-cta {
+  display: flex;
+  flex-direction: row;
+  gap: 18px;
+  justify-content: center;
+  width: 100%;
+}
+
+.sidebar-cta-button {
+  background: #bdbdbd;
+  border-left: 2px solid #dfdfdf;
+  border-top: 2px solid #dfdfdf;
+  border-bottom: 2px solid #000000;
+  border-right: 2px solid #000000;
+  width: fit-content;
+  white-space: nowrap;
+  padding: 5px 10px 5px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 26px;
+  font-family: "Inter";
+  font-size: 0.85em;
+  font-weight: 600;
+  transition: all ease 0.2s;
+}
+
+.sidebar-cta-button span {
+  color: #0000ff;
+}
+
+.sidebar-cta-button:hover {
+  border-right: 2px solid #dfdfdf;
+  border-bottom: 2px solid #dfdfdf;
+  border-top: 2px solid #000000;
+  border-left: 2px solid #000000;
+}
+
+/* SLIDESHOW WALLPAPER */
+@keyframes slideshow {
+  0% {
+    background-image: url("../wallpapers/windows-98-d4k1qydpj9fx5n3q.jpg");
+  }
+  33% {
+    background-image: url("../wallpapers/windows-98-c4mxzm5l0a47212u.jpg");
+  }
+  66% {
+    background-image: url("../wallpapers/windows-98-yaa4sbkls0sleaqm.jpg");
+  }
+  100% {
+    background-image: url("../wallpapers/wp2808032-windows-98-background.jpg");
+  }
+}
+
+/* APPLY TO MAIN CONTAINER */
+.main-container {
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+  animation: slideshow 20s infinite ease-in-out;
+}
+
+/* MAIN CONTAINER */
+.main-container {
+  height: calc(100vh - 56px);
+  float: right;
+  background-color: #008080;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 20px 20px 0 20px;
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: repeart(20, 4.05%);
+  grid-template-rows: repeat(20, 5%);
+}
