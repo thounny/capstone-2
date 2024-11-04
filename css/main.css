@@ -1,0 +1,91 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* FONT */
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url(../fonts/helveticaneue.woff2);
+}
+
+/* WIDTH */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* TRACK */
+::-webkit-scrollbar-track {
+  background: #dfdedf;
+}
+
+/* HANDLE */
+::-webkit-scrollbar-thumb {
+  background: #bdbdbd;
+  border-left: 2px solid #dfdfdf;
+  border-top: 2px solid #dfdfdf;
+  border-bottom: 2px solid #000000;
+}
+
+/* HANDLE ON HOVER */
+::-webkit-scrollbar-button:hover {
+  background: #bdbdbd;
+  border-right: 2px solid #dfdfdf;
+  border-bottom: 2px solid #dfdfdf;
+  border-top: 2px solid #000000;
+  border-left: 2px solid #000000;
+}
+
+/* SCROLL BAR BUTTON */
+
+/* UP */
+::webkit-scrollbar-button:single-button:vertical:decrement {
+  background-position: center;
+  background-image: url("../images/scroll-up.png");
+  border-left: 2px solid #dfdfdf;
+  border-top: 2px solid #dfdfdf;
+  border-bottom: 2px solid #000000;
+  height: 22px;
+}
+
+/* DOWN */
+::webkit-scrollbar-button:single-button:vertical:increment {
+  background-position: center;
+  background-image: url("../images/scroll-down.png");
+  border-left: 2px solid #dfdfdf;
+  border-top: 2px solid #dfdfdf;
+  border-bottom: 2px solid #000000;
+  height: 22px;
+}
+
+/* A:LINK */
+a {
+  color: #000000;
+  text-decoration: none;
+}
+a:visited {
+  color: #000000;
+}
+
+/* NAV BAR */
+nav {
+  height: clamp(50px, 56px, 62px);
+  width: 100vw;
+  bottom: 0;
+  padding: 1px 5px 1px 5px;
+  position: fixed;
+  border-top: 2px solid #e6e6e6;
+  background: #bdbdbd;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  z-index: 100;
+}
