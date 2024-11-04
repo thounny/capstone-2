@@ -342,4 +342,9 @@ sc-text {
   overflow: hidden;
   grid-template-columns: repeart(20, 4.05%);
   grid-template-rows: repeat(20, 5%);
+  column-gap: 1%;
+}
+
+.mc-home {
+  width: 100vw;
 }
