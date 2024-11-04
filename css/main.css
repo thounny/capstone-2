@@ -89,3 +89,79 @@ nav {
   gap: 5px;
   z-index: 100;
 }
+
+/* BUTTON */
+.main-button {
+  background: #bdbdbd;
+  height: (42px 48px, 54px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px 10px 0px 10px;
+  gap: 8px;
+
+  /* BUTTON FONT */
+  font-family: "Inter";
+  font-size: 0.8em;
+  font-weight: 700;
+  color: #000000;
+  text-decoration: none;
+  justify-content: center;
+}
+
+.main-button img {
+  height: 80%;
+}
+
+.button-empty {
+  width: auto;
+  flex-grow: 40;
+}
+
+.bsi {
+  min-width: 60px;
+  max-width: 200px;
+  width: fit-content;
+  flex-shrink: 20;
+  overflow: hidden;
+  white-space: nowrap;
+  justify-content: left;
+  padding: 0px 18-x 0px 10px;
+}
+
+/* BUTTON BORDER */
+.w98-b {
+  box-shadow: inset 2px 2px 2px #dfdfdf, inset -2px -2px #5d5d5d;
+  border-left: 2px solid #fefefe;
+  border-top: 2px solid #fefefe;
+  border-bottom: 2px solid #000000;
+  border-right: 2px solid #000000;
+  transition: all ease 0.2s;
+}
+
+.w98-b:hover {
+  box-shadow: inset -2px -2px #dfdfdf, inset 2px 2px #5d5d5d;
+  border-left: 2px solid #fefefe;
+  border-top: 2px solid #fefefe;
+  border-bottom: 2px solid #000000;
+  border-right: 2px solid #000000;
+}
+
+/* BUTTON REVERT = TAB SELECTED */
+.w98-b-reverse {
+  box-shadow: inset -2px -2px #dfdfdf, inset 2px 2px #5d5d5d;
+  border-right: 2px solid #fefefe;
+  border-bottom: 2px solid #fefefe;
+  border-top: 2px solid #000000;
+  border-left: 2px solid #000000;
+  transition: all ease 0.2s;
+}
+
+.w98-b-reverse:hover {
+  box-shadow: inset 2px 2px #dfdfdf, inset -2px -2px #5d5d5d;
+  border-left: 2px solid #fefefe;
+  border-bottom: 2px solid #000000;
+  border-right: 2px solid #000000;
+}
+
+
