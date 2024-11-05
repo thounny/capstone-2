@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <!-- STYLESHEETS -->
+    <link href="../css/main.css" rel="stylesheet" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta charset="utf-8" />
+    <meta content="National Parks - Enjoy the Outdoors" name="description" />
+    <meta content="Thounny Keo" name="author" />
+    <title>National Parks</title>
+    <link href="../images/tone.png" rel="icon" type="image/png" />
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a class="main-button w98-b-reverse" href="../index.html"><img
+                    src="../images/tone.png" /><span>Start</span></a>
+            <article class="nav-social">
+                <div class="w98-separator-1"></div>
+                <div class="w98-separator-2"></div>
+                <section class="nav-rs-btn-container">
+                    <article class="nav-rs-btn"><a href="https://thounny.beehiiv.com/subscribe" target="_blank"><img
+                                src="../images/Vegetto_Rests.gif" /></a></article>
+                    <article class="nav-rs-btn"><a href="https://github.com/thounny" target="_blank"><img
+                                src="../images/github.svg" /></a></article>
+                    <article class="nav-rs-btn"><a href="https://www.linkedin.com/in/thounny/" target="_blank"><img
+                                src="../images/linkedin.png" /></a></article>
+                </section>
+                <div class="w98-separator-1"></div>
+                <div class="w98-separator-2"></div>
+            </article>
+
+            <!-- TASKBAR ICONS -->
+            <a class="main-button w98-b bsi w98-b-reverse" href="../national_parks/national_parks.html"><img
+                    src="../images/nature_tour.gif" /><span>National Parks!</span></a>
+            <a class="main-button w98-b bsi" href="../mountains/mountains.html"><img
+                    src="../images/mountainsnowglobe.gif" /><span>Mountains!!!</span></a>
+            <a class="main-button w98-b bsi" href="../photos/photos.html"><img
+                    src="../images/UPDATED.gif" /><span>Photos</span></a>
+            <a class="main-button w98-b bsi" href="../books/books.html"><img
+                    src="../images/books.gif" /><span>Books</span></a>
+            <a class="main-button w98-b bsi" href="../events/events.html"><img
+                    src="../images/globe_anime.gif" /><span>Events</span></a>
+            <a class="main-button w98-b bsi" href="../about/about.html"><img
+                    src="../images/anime.gif" /><span>About</span></a>
+
+            <div class="button-empty"></div>
+            <span class="main-button w98-cl" id="live-est-clock"></span>
+        </nav>
+    </header>
+
+    <section class="sidebar-container">
+        <div class="sc-logo-cont">
+            <img src="../images/nature_life.gif" alt="Nature Logo" />
+            <img src="../images/nature_life_2.gif" alt="Nature Logo" />
+            <img src="../images/nature_life_3.gif" alt="Nature Logo" />
+            <img src="../images/nature_place_2.gif" alt="Nature Logo" />
+        </div>
+        <section class="sidebar-cta">
+            <a class="sidebar-cta-button" href="../gallery/gallery.html"><span><u>G</u>allery</span></a>
+            <a class="sidebar-cta-button" href="../mountains/mountains.html"><span><u>N</u>ext</span></a>
+        </section>
+        <div class="sc-separator"></div>
+        <span class="sc-text">
+            Explore the majestic national parks filled with beauty and nature’s wonder.
+            <br /><br />
+            Discover trails, wildlife, and landscapes that define the outdoors and inspire adventure.
+            <br /><br />
+            Each park holds unique treasures and stories that invite visitors to reconnect with nature.
+        </span>
+    </section>
+
+    <!-- NATIONAL PARKS SEARCH WINDOW -->
+    <section class="main-container mc-project">
+        <article class="box-article bx-p-1 ui-draggable ui-draggable-handle" id="draggable" style="position: relative;">
+            <article class="box-article-nav">
+                <img src="../images/nature_icon.png" />
+                <span>National Parks Search:</span>
+            </article>
+            <article class="box-article-content">
+                <h2>Find a National Park</h2>
+
+                <label for="location-dropdown">Search by Location:</label>
+                <select id="location-dropdown" class="select-style">
+                    <option value="">Select a State/Territory</option>
+                </select>
+
+                <label for="park-type-dropdown">Search by Park Type:</label>
+                <select id="park-type-dropdown" class="select-style">
+                    <option value="">Select Park Type</option>
+                </select>
+
+                <button id="search-button" class="button-style">Search</button>
+                <button id="view-all-button" class="button-style">View All Parks</button>
+                <button id="clear-results-button" class="button-style clear-results">Clear Results</button>
+
+                <div id="results-container" style="margin-top: 20px;">
+                    <h3>Search Results</h3>
+                    <div id="results" class="results-section"></div>
+                </div>
+            </article>
+        </article>
+    </section>
+
+    <section class="main-container mc-project">
+        <article class="box-article bx-s-1 ui-draggable ui-draggable-handle" id="draggable" style="position: relative;">
+            <article class="box-article-nav">
+                <img src="../images/nature_icon.png" />
+                <span>NationalPark.gif</span>
+            </article>
+            <article class="box-article-content b-stp-noscroll">
+                <article><img alt="national-park-animated" src="../images/national_park-animated.gif" /></article>
+            </article>
+        </article>
+    </section>
+
+    <div class="mobile-popup">
+        <article class="box-article bx-m-1 ui-draggable ui-draggable-handle">
+            <article class="box-article-nav">
+                <img src="../images/error_alert.gif" />
+                <span>Error.svg</span>
+            </article>
+            <article class="box-article-content b-stp-noscroll b-stp-padding">
+                <section class="bx-error">
+                    <article class="error-icon-text">
+                        <img src="../images/error_alert.gif" />
+                        <img src="../images/error.gif" />
+                    </article>
+                    <span>This page does not work<br />on mobile :(</span>
+                    <span>-&gt; visit on Desktop please</span>
+                </section>
+            </article>
+        </article>
+        <article class="box-article bx-m-2 ui-draggable ui-draggable-handle">
+            <article class="box-article-nav">
+                <img src="../images/tone.png" />
+                <span>Contact.txt</span>
+            </article>
+            <article class="box-article-content b-stp-noscroll b-stp-padding">
+                <section class="bx-m-contact">
+                    <img src="../images/mjshuffle.gif" />
+                    <div class="sc-separator"></div>
+                    <span>↓email↓<br />thounny[at]gmail.com</span>
+                    <span>↓my socials↓<br />[at]thounny</span>
+                    <section class="bx-m-contact-rs">
+                        <a href="https://thounny.beehiiv.com/subscribe" target="_blank"><img
+                                src="../images/tone.png" /></a>
+                        <a href="https://github.com/thounny" target="_blank"><img src="../images/github.svg" /></a>
+                        <a href="https://www.linkedin.com/in/thounny/" target="_blank"><img
+                                src="../images/linkedin.png" /></a>
+                    </section>
+                </section>
+            </article>
+        </article>
+    </div>
+
+    <section class="container-drag-limit" id="drag-limit"></section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    <script src="../data/locationData.js"></script>
+    <script src="../data/parkTypeData.js"></script>
+    <script src="../data/nationalParkData.js"></script>
+    <script src="../scripts/national_parks.js"></script>
+    <script src="../scripts/clock.js"></script>
+
+    <script>
+        jQuery(function ($) {
+            $('.box-article').draggable({ containment: "#drag-limit", scroll: false, multiple: true });
+        });
+    </script>
+</body>
+
+</html>
