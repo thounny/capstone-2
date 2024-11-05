@@ -55,8 +55,8 @@ document.addEventListener("DOMContentLoaded", () => {
       if (data.status === "OK") {
         const { sunrise, sunset } = data.results;
         document.getElementById("sunrise-sunset").innerHTML = `
-                    <p><strong>Sunrise:</strong> ${sunrise.format("h:mm A")}</p>
-                    <p><strong>Sunset:</strong> ${sunset.format("h:mm A")}</p>
+                    <p><strong>Sunrise:</strong> ${sunrise} UTC</p>
+                    <p><strong>Sunset:</strong> ${sunset} UTC</p>
                 `;
       } else {
         document.getElementById("sunrise-sunset").textContent =
