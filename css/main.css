@@ -725,6 +725,49 @@ button.clear-results:hover {
   text-decoration: none;
 }
 
+/* MOUNTAIN RESULTS */
+#mountain-results {
+  margin-top: 20px;
+  padding: 10px;
+}
+
+/* RESULT BOX */
+#mountain-info .result-box {
+  background-color: #e6e6e6;
+  border: 1px solid #b3b3b3;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* MOUNTAIN NAME */
+#mountain-info .result-box h3 {
+  margin-top: 0;
+  font-size: 1.25em;
+  color: #333;
+}
+
+/* MOUNTAIN INFORMATION */
+#mountain-info .result-box h3 {
+  margin-top: 0;
+  font-size: 1.25em;
+  color: #333;
+}
+
+#mountain-info .result-box p {
+  margin: 5px 0;
+  color: #555;
+}
+
+/* MOUNTAIN IMAGE */
+#mountain-info .result-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
 /* MOBILE POPUP */
 .mobile-popup {
   z-index: 100;
