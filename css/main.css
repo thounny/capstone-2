@@ -653,6 +653,78 @@ nav {
   grid-column: 4/18;
 }
 
+/* CLEAR BUTTON */
+button.clear-results {
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+button.clear-results:hover {
+  background-color: #d32f2f;
+}
+
+.button-style {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  margin: 5px 5px 10px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.button-style:hover {
+  background-color: #45a049;
+}
+
+.clear-results {
+  background-color: #f44336;
+}
+
+.clear-results:hover {
+  background-color: #d32f2f;
+}
+
+/* NATIONAL PARKS */
+.park-result {
+  background-color: #f0f0f0;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* NATIONAL PARKS TITLE */
+.park-result h3 {
+  margin-top: 0;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #333;
+}
+
+/* NATIONAL PARKS DETAILS */
+.park-result p {
+  margin: 5px 0;
+  color: #555;
+  font-size: 0.95em;
+}
+
+/* LINK STYLING */
+.park-result a {
+  color: #0066cc;
+  text-decoration: underline;
+}
+
+.park-result a:hover {
+  text-decoration: none;
+}
+
 /* MOBILE POPUP */
 .mobile-popup {
   z-index: 100;
