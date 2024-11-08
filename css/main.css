@@ -244,11 +244,13 @@ nav {
   width: 100%;
 }
 .sc-logo-cont {
-  width: 70%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 .sc-text {
   font-family: "Helvetica Neue";
-  font-size: 0.9em;
+  font-size: 2.0em;
   font-weight: 500;
 }
 
@@ -291,18 +293,34 @@ nav {
 /* Slideshow Animation */
 @keyframes slideshow {
   0% {
-    background-image: url("../wallpapers/windows-98-d4k1qydpj9fx5n3q.jpg");
+    background-image: url("../wallpapers/dragonballz.jpg");
   }
-  33% {
-    background-image: url("../wallpapers/windows-98-c4mxzm5l0a47212u.jpg");
+  12.5% {
+    background-image: url("../wallpapers/dragonballz2.jpg");
   }
-  66% {
-    background-image: url("../wallpapers/windows-98-yaa4sbkls0sleaqm.jpg");
+  25% {
+    background-image: url("../wallpapers/aaliyah.jpg");
+  }
+  37.5% {
+    background-image: url("../wallpapers/late90s.jpg");
+  }
+  50% {
+    background-image: url("../wallpapers/myspac.jpg");
+  }
+  62.5% {
+    background-image: url("../wallpapers/sponebob.jpeg");
+  }
+  75% {
+    background-image: url("../wallpapers/neji.jpg");
+  }
+  87.5% {
+    background-image: url("../wallpapers/2000s.jpg");
   }
   100% {
-    background-image: url("../wallpapers/wp2808032-windows-98-background.jpg");
+    background-image: url("../wallpapers/dragonballz.jpg"); 
   }
 }
+
 
 /* APPLY TO MAIN CONTAINER */
 .main-container {
@@ -310,7 +328,7 @@ nav {
   width: 100vw;
   background-size: cover;
   background-position: center;
-  animation: slideshow 20s infinite ease-in-out;
+  animation: slideshow 60s infinite ease-in-out;
 }
 
 /* MAIN CONTAINER */
@@ -375,13 +393,21 @@ nav {
   height: 20px;
   width: auto;
 }
+
 .box-article-content {
   overflow-y: scroll;
   flex-grow: 4;
   display: flex;
   flex-direction: column;
   gap: 0px;
+  font-family: "Helvetica Neue";
+  font-weight: 100;
 }
+
+.box-article-content a:hover {
+  color: blue;
+}
+
 .box-article-content article {
   width: 100%;
   height: fit-content;
@@ -401,6 +427,121 @@ nav {
   width: 100%;
   height: auto;
   display: block;
+}
+
+.box-article-content.rawscape {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(150px, 1fr)
+  ); 
+  gap: 10px; 
+  padding: 10px;
+}
+
+.box-article-content.rawscape img {
+  width: 100%; 
+  height: auto; 
+  object-fit: contain; 
+  border-radius: 5px;
+}
+
+#content-window {
+  min-height: 300px; 
+  height: 500px; 
+  max-height: 600px; 
+  overflow-y: auto;
+}
+
+/* Button styling for back button */
+#back-button {
+  margin-left: auto;
+  background-color: #888;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 5px 10px;
+  font-family: "Inter", sans-serif;
+}
+
+#back-button:hover {
+  background-color: #555;
+}
+
+#flyers-content .program-file img {
+  width: 40px;
+  height: auto; 
+  max-width: 100%; 
+}
+
+#books-content .program-file img {
+  width: 40px; 
+  height: auto;
+  max-width: 100%;
+  margin-right: 10px;
+  align-items: center;
+}
+
+.program-file {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.program-file span {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+#books-content {
+  height: 400px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#books-content img {
+  max-height: 100%; 
+}
+#book-content-area {
+  min-height: 200px; /* Minimum height to keep the window visually accessible */
+  max-height: 400px; /* Maximum height to limit the window size */
+  width: 100%; /* Full width or adjust as needed */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 10px;
+
+}
+
+.image-pair {
+  display: flex;
+  width: 100%; 
+  gap: 0; 
+}
+
+.image-pair img {
+  width: 50%; 
+  height: auto; 
+  object-fit: cover; /
+}
+
+/* SCROLLBAR CUSTOMIZATION */
+#content-area::-webkit-scrollbar {
+  width: 8px;
+}
+
+#content-area::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+#content-area::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 4px;
+}
+
+#content-area::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 /* BOX CONTACT */
