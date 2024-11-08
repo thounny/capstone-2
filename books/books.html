@@ -14,15 +14,14 @@
     <meta charset="utf-8" />
     <meta content="Explore Mountains and National Parks" name="description" />
     <meta content="Nature Gallery" name="author" />
-    <title>Nature Photo Gallery</title>
+    <title>Books Page</title>
     <link href="../images/tone.png" rel="icon" type="image/png" />
 </head>
 
 <body>
     <header>
         <nav>
-            <a class="main-button w98-b-reverse" href="../index.html"><img
-                    src="../images/tone.png" /><span>Start</span></a>
+            <a class="main-button w98-b bsi" href="../index.html"><img src="../images/tone.png" /><span>Start</span></a>
             <article class="nav-social">
                 <div class="w98-separator-1"></div>
                 <div class="w98-separator-2"></div>
@@ -51,6 +50,8 @@
                     src="../images/globe_anime.gif" /><span>Events</span></a>
             <a class="main-button w98-b bsi" href="../about/about.html"><img
                     src="../images/anime.gif" /><span>About</span></a>
+            <a class="main-button w98-b bsi" href="../guestbook/guestbook.html"><img
+                    src="../images/guestbook.gif" /><span>Guestbook</span></a>
 
             <div class="button-empty"></div>
             <span class="main-button w98-cl" id="live-est-clock"></span>
@@ -59,7 +60,7 @@
 
     <section class="sidebar-container">
         <div class="sc-logo-cont">
-            <img src="../images/capstone_logo.gif" alt="Gallery Logo" />
+            <img src="../images/Flyingbooks.gif" alt="Flying book gif" />
         </div>
 
         <section class="sidebar-cta">
@@ -76,28 +77,48 @@
     </section>
 
     <section class="main-container mc-project">
-        <article class="box-article bx-p-1 ui-draggable ui-draggable-handle" id="draggable" style="position: relative;">
+        <!-- Books Window (for PDF images) -->
+        <article class="box-article bx-p-1 ui-draggable ui-draggable-handle" id="books-window"
+            style="position: relative;">
             <article class="box-article-nav">
-                <img src="../images/book-cover.png" />
-                <span>National_Parks_Guide.png</span>
+                <img src="../images/tone.png" />
+                <span>Books/</span>
+                <button id="back-button" onclick="goBackToSelection()">Back</button>
             </article>
-            <article class="box-article-content">
-                <article><img alt="national-parks-1" src="../images/books/national-parks-1.jpg" /></article>
-                <article><img alt="national-parks-2" src="../images/books/national-parks-2.jpg" /></article>
+            <article class="box-article-content" id="books-content">
+                <!-- Program files for each book -->
+                <div class="program-file" ondblclick="loadBookContent('denali')">
+                    <img src="../images/file.png" height="40px" alt="Denali Icon" />
+                    <span>Denali</span>
+                </div>
+                <div class="program-file" ondblclick="loadBookContent('grandma_gatewood')">
+                    <img src="../images/file.png" height="40px" alt="Grandma Gatewood Icon" />
+                    <span>Grandma Gatewood</span>
+                </div>
+                <div class="program-file" ondblclick="loadBookContent('raw_earth')">
+                    <img src="../images/file.png" height="40px" alt="Raw Earth Icon" />
+                    <span>Raw Earth</span>
+                </div>
+                <div class="program-file" ondblclick="loadBookContent('words_of_messner')">
+                    <img src="../images/file.png" height="40px" alt="Words of Messner Icon" />
+                    <span>Words of Messner</span>
+                </div>
             </article>
         </article>
-        <article class="box-article bx-s-3 ui-draggable ui-draggable-handle" id="draggable" style="position: relative;">
+
+        <!-- Content Window for Book Details -->
+        <article class="box-article bx-s-3 ui-draggable ui-draggable-handle" id="book-content-window"
+            style="position: relative;">
             <article class="box-article-nav">
-                <img src="../images/book-cover.png" />
-                <span>Mountain_Explorations.mp4</span>
+                <img src="../images/tone.png" />
+                <span>Book_Description.pdf</span>
             </article>
-            <article class="box-article-content b-stp-noscroll">
-                <article><video autoplay="" loop="" muted="">
-                        <source src="../videos/mountain-trailer.mp4" type="video/mp4" />
-                    </video></article>
+            <article class="box-article-content" id="book-content-area">
+                <p>Double-click on a book file to view details here.</p>
             </article>
         </article>
     </section>
+
 
     <div class="mobile-popup">
         <article class="box-article bx-m-1 ui-draggable ui-draggable-handle">
@@ -148,6 +169,190 @@
         });
     </script>
     <script src="../scripts/clock.js"></script>
+    <!-- BOOKS UPDATE -->
+    <script>
+        function loadBookContent(book) {
+            const bookContentWindow = document.getElementById("book-content-area");
+            const booksWindow = document.getElementById("books-content");
+
+            // Clear the books content to avoid stacking images on repeated clicks
+            booksWindow.innerHTML = "";
+
+            // Book data and images
+            const booksData = {
+                'denali': {
+                    description: `
+                <h2>Denali: Beyond the Bounds of Comfort</h2>
+<p><em>Denali</em> is an immersion into the stark, untamed wilderness of Denali National Park—a landscape where nature exists on its own terms, free of compromise. In this book, we explore the raw, unfiltered beauty of Alaska’s iconic peak and its surroundings, a place where survival is measured in resilience and respect for the land's ancient, unforgiving rhythms.</p>
+
+<p>Each page strips away the gloss of conventional outdoor photography, instead presenting Denali’s landscape as it is: rugged, relentless, and utterly indifferent to human desires. This is not an invitation to simply admire; it’s a call to confront. Massive glaciers and sweeping tundra blend with towering peaks in a visual narrative that mirrors the essence of brutalist design—minimal, intense, and fiercely genuine. Shadows play against sharp contrasts in light, amplifying a sense of isolation and the land's overwhelming scale.</p>
+
+<p>Denali’s raw terrain tests the human spirit; every image in this book reminds the viewer that this is no mere scenic overlook. It's a proving ground, where the mountain’s indifferent beauty becomes a mirror, revealing resilience, humility, and respect. In a world softened by convenience, <em>Denali</em> stands as a visceral reminder of nature’s brute, unrefined grandeur.</p>
+
+                    <li>Author: Thounny Keo</li>
+                    <li>Genre: National Parks, Mountains, Swag</li>
+                    <li>Pages: 2000</li>
+                </ul>
+                `,
+                    images: [
+                        "../denali/editorial_3.jpg",
+                        "../denali/editorial_32.jpg",
+                        "../denali/editorial_33.jpg",
+                        "../denali/editorial_34.jpg",
+                        "../denali/editorial_35.jpg",
+                        "../denali/editorial_36.jpg",
+                        "../denali/editorial_37.jpg",
+                        "../denali/editorial_38.jpg",
+                        "../denali/editorial_39.jpg",
+                        "../denali/editorial_310.jpg",
+                        "../denali/editorial_311.jpg",
+                    ]
+                },
+                'grandma_gatewood': {
+                    description: `
+                <h2>Grandma Gatewood: Trailblazer of the Appalachian</h2>
+<p><em>Grandma Gatewood</em> is more than a story of a woman who hiked the Appalachian Trail; it’s an exploration of resilience, defiance, and the raw power of human spirit. At 67, Emma Gatewood—known to the world as Grandma Gatewood—set out alone on the rugged, unforgiving 2,168-mile path with little more than a pair of sneakers, a blanket, and her indomitable will. What began as an escape from a life of hardship and abuse became a trailblazing journey that would redefine the limits of age and endurance.</p>
+
+<p>This book dives into her first two historic attempts, exposing the grit beneath the legend. Each chapter pulls back the polished veneer, revealing her as an emblem of strength that parallels the brutalist landscape she walked. Through mud, rock, and relentless weather, she faced each obstacle not as a barrier, but as a testament to her will to push forward. Gatewood’s story becomes a lesson in defiance—against societal expectations, against the softness of modern convenience, against the notion that age is a boundary.</p>
+
+<p>With stark, unadorned imagery and words that capture the relentless pace of her steps, <em>Grandma Gatewood</em> is a celebration of the solitary warrior spirit. It is a tribute to an unconventional legacy that defies the polished narratives of our time, embracing instead the authenticity of struggle, survival, and quiet triumph on the trail.</p>
+
+                    <li>Author: Thounny Keo</li>
+                    <li>Genre: Biography, Hiking, Swag, Epic</li>
+                    <li>Pages: 280</li>
+                </ul>`,
+                    images: [
+                        "../grandma_gatewood/editorial_2.jpg",
+                        "../grandma_gatewood/editorial_22.jpg",
+                        "../grandma_gatewood/editorial_23.jpg",
+                        "../grandma_gatewood/editorial_24.jpg",
+                        "../grandma_gatewood/editorial_25.jpg",
+                        "../grandma_gatewood/editorial_26.jpg",
+                        "../grandma_gatewood/editorial_27.jpg",
+                        "../grandma_gatewood/editorial_28.jpg",
+                        "../grandma_gatewood/editorial_29.jpg",
+                        "../grandma_gatewood/editorial_210.jpg",
+                        "../grandma_gatewood/editorial_211.jpg",
+                        "../grandma_gatewood/editorial_212.jpg",
+                    ]
+                },
+                'raw_earth': {
+                    description: `
+                 <h2>Raw Earth: Digital Brutalism in Design</h2>
+    <p><em>Raw Earth</em> is an exploration of the digital wilderness—a landscape stripped of polish, comfort, and compromise. This book delves into the unfiltered essence of digital brutalism, 
+        where the design is as uncompromising as the terrain it seeks to emulate. Through stark visuals, powerful contrasts, and raw textures, <em>Raw Earth</em> invites readers into a space where simplicity is fierce, 
+        and beauty lies in the harsh realities of an unyielding digital environment.</p>
+
+    <p>Here, each page offers a journey into digital landscapes that challenge conventional aesthetics. Every element is crafted to remind the viewer of nature's indifference, 
+        mirroring a world where survival and resilience are paramount. Shadows fall across minimalistic structures, evoking solitude and primal instinct, 
+        hile the silence of negative space amplifies the intensity of each design decision.</p>
+
+    <p><em>Raw Earth</em> is not for the faint-hearted; it calls to those who seek a deeper connection with the unadorned, those willing to confront the raw and the real. This is not just a book—it’s a 
+        test of endurance, a communion with brutal beauty, and a celebration of digital design that dares to remain untamed.</p>
+                <ul>
+                    <li>Author: Thounny Keo</li>
+                    <li>Genre: Digital, Brutalism, Design</li>
+                    <li>Pages: 24</li>
+                </ul>`,
+                    images: [
+                        "../raw_earth/editorial_5.jpg",
+                        "../raw_earth/editorial_52.jpg",
+                        "../raw_earth/editorial_53.jpg",
+                        "../raw_earth/editorial_54.jpg",
+                        "../raw_earth/editorial_55.jpg",
+                        "../raw_earth/editorial_56.jpg",
+                        "../raw_earth/editorial_57.jpg",
+                        "../raw_earth/editorial_58.jpg",
+                        "../raw_earth/editorial_59.jpg",
+                        "../raw_earth/editorial_510.jpg",
+                        "../raw_earth/editorial_511.jpg",
+                        "../raw_earth/editorial_512.jpg",
+                        "../raw_earth/editorial_513.jpg"
+                    ]
+                },
+                'words_of_messner': {
+                    description: `
+               <h2>Words of Messner: A Dialogue with the Heights</h2>
+<p><em>Words of Messner</em> invites readers into the mind of one of mountaineering's most revered pioneers, Reinhold Messner. Through a candid and profound interview with Thounny Keo, Messner reflects on a life carved by the peaks, sharing his experiences, philosophies, and the essence of what it means to confront nature on its own terms.</p>
+
+<p>This interview unveils Messner’s perspectives on risk, isolation, and the raw allure of unclimbed mountains. His words resonate as a testament to human endurance and a reminder of nature’s unyielding beauty. Each answer reveals a man who doesn’t just climb mountains but seeks communion with them, finding in their shadows and silences a mirror to his own spirit.</p>
+
+<p>With questions that cut to the heart of Messner's motivations, triumphs, and fears, Thounny Keo crafts an interview that is both personal and universal, a rare look into the mindset of a man who has repeatedly pushed the boundaries of what is possible.</p>
+
+<ul>
+    <li>Author: Thounny Keo</li>
+    <li>Interviewee: Reinhold Messner</li>
+    <li>Genre: Memoir, Interview</li>
+    <li>Pages: 200</li>
+</ul>
+`,
+                    images: [
+                        "../words_of_messner/editorial_1.jpg",
+                        "../words_of_messner/editorial_12.jpg",
+                        "../words_of_messner/editorial_13.jpg",
+                        "../words_of_messner/editorial_14.jpg",
+                        "../words_of_messner/editorial_15.jpg",
+                        "../words_of_messner/editorial_16.jpg",
+                        "../words_of_messner/editorial_17.jpg",
+                        "../words_of_messner/editorial_18.jpg",
+                        "../words_of_messner/editorial_19.jpg",
+                        "../words_of_messner/editorial_110.jpg",
+                        "../words_of_messner/editorial_111.jpg"
+                    ]
+                }
+            };
+
+            // Load the selected book's description
+            const selectedBook = booksData[book];
+            bookContentWindow.innerHTML = selectedBook.description;
+
+            // Display each image individually
+            selectedBook.images.forEach((imageSrc, index) => {
+                const img = document.createElement("img");
+                img.src = imageSrc;
+                img.alt = `${book} page ${index + 1}`;
+                booksWindow.appendChild(img);
+            });
+
+        }
+
+
+    </script>
+
+    <!-- BACK BUTTON -->
+    <script>
+        function goBackToSelection() {
+            const bookContentWindow = document.getElementById("book-content-area");
+            const booksWindow = document.getElementById("books-content");
+
+            // Reset the book content area to the default message
+            bookContentWindow.innerHTML = `
+            <p>Double-click on a book file to view details here.</p>
+        `;
+
+            // Display all program file icons in the books window
+            booksWindow.innerHTML = `
+            <div class="program-file" ondblclick="loadBookContent('denali')">
+                <img src="../images/file.png" height="40px" alt="Denali Icon" />
+                <span>Denali</span>
+            </div>
+            <div class="program-file" ondblclick="loadBookContent('grandma_gatewood')">
+                <img src="../images/file.png" height="40px" alt="Grandma Gatewood Icon" />
+                <span>Grandma Gatewood</span>
+            </div>
+            <div class="program-file" ondblclick="loadBookContent('raw_earth')">
+                <img src="../images/file.png" height="40px" alt="Raw Earth Icon" />
+                <span>Raw Earth</span>
+            </div>
+            <div class="program-file" ondblclick="loadBookContent('words_of_messner')">
+                <img src="../images/file.png" height="40px" alt="Words of Messner Icon" />
+                <span>Words of Messner</span>
+            </div>
+        `;
+        }
+    </script>
+
+
 </body>
 
 </html>
