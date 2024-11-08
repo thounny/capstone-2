@@ -153,8 +153,24 @@
                     <img src="../images/thanks.gif" alt="thank you!">
                 </div>
             </article>
+
         </article>
+        <article class="box-article bx-s-1 ui-draggable ui-draggable-handle" id="draggable" style="position: relative;">
+            <article class="box-article-nav">
+                <img src="../images/tone.png" />
+                <span>mariah_carey.mp4</span>
+            </article>
+            <article class="box-article-content b-stp-noscroll">
+                <article>
+                    <video id="introVideo" autoplay loop muted playsinline>
+                        <source src="../video/cant_let_go.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                    <button id="muteButton" onclick="toggleMute()">Unmute</button>
+                </article>
     </section>
+
+
 
     <div class="mobile-popup">
         <article class="box-article bx-m-1 ui-draggable ui-draggable-handle">
@@ -170,6 +186,27 @@
                     </article>
                     <span>This page does not work<br />on mobile :(</span>
                     <span>-&gt; visit on Desktop please</span>
+                </section>
+            </article>
+        </article>
+        <article class="box-article bx-m-2 ui-draggable ui-draggable-handle">
+            <article class="box-article-nav">
+                <img src="../images/tone.png" />
+                <span>Contact.txt</span>
+            </article>
+            <article class="box-article-content b-stp-noscroll b-stp-padding">
+                <section class="bx-m-contact">
+                    <img src="../images/mjshuffle.gif" />
+                    <div class="sc-separator"></div>
+                    <span>↓email↓<br />thounny[at]gmail.com</span>
+                    <span>↓my socials↓<br />[at]thounny</span>
+                    <section class="bx-m-contact-rs">
+                        <a href="https://thounny.beehiiv.com/subscribe" target="_blank"><img
+                                src="../images/tone.png" /></a>
+                        <a href="https://github.com/thounny" target="_blank"><img src="../images/github.svg" /></a>
+                        <a href="https://www.linkedin.com/in/thounny/" target="_blank"><img
+                                src="../images/linkedin.png" /></a>
+                    </section>
                 </section>
             </article>
         </article>
@@ -196,6 +233,25 @@
                 alert('Please fill out all fields.');
             }
             return false; // Prevent form submission for demo
+        }
+    </script>
+
+    <!-- CAN'T LET GO -->
+    <script>
+        const video = document.getElementById("introVideo");
+        const muteButton = document.getElementById("muteButton");
+
+        // volume to 30% bc it's loud
+        video.volume = 0.3;
+
+        function toggleMute() {
+            if (video.muted) {
+                video.muted = false;
+                muteButton.textContent = "Mute";
+            } else {
+                video.muted = true;
+                muteButton.textContent = "Unmute";
+            }
         }
     </script>
 </body>
