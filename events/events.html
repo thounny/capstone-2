@@ -14,15 +14,14 @@
     <meta charset="utf-8" />
     <meta content="Explore Mountains and National Parks" name="description" />
     <meta content="Nature Gallery" name="author" />
-    <title>Nature Photo Gallery</title>
+    <title>Events Page</title>
     <link href="../images/tone.png" rel="icon" type="image/png" />
 </head>
 
 <body>
     <header>
         <nav>
-            <a class="main-button w98-b-reverse" href="../index.html"><img
-                    src="../images/tone.png" /><span>Start</span></a>
+            <a class="main-button w98-b bsi" href="../index.html"><img src="../images/tone.png" /><span>Start</span></a>
             <article class="nav-social">
                 <div class="w98-separator-1"></div>
                 <div class="w98-separator-2"></div>
@@ -51,6 +50,8 @@
                     src="../images/globe_anime.gif" /><span>Events</span></a>
             <a class="main-button w98-b bsi" href="../about/about.html"><img
                     src="../images/anime.gif" /><span>About</span></a>
+            <a class="main-button w98-b bsi" href="../guestbook/guestbook.html"><img
+                    src="../images/guestbook.gif" /><span>Guestbook</span></a>
 
             <div class="button-empty"></div>
             <span class="main-button w98-cl" id="live-est-clock"></span>
@@ -59,7 +60,7 @@
 
     <section class="sidebar-container">
         <div class="sc-logo-cont">
-            <img src="../images/capstone_logo.gif" alt="Gallery Logo" />
+            <img src="../images/events.gif" alt="Events Gif" />
         </div>
 
         <section class="sidebar-cta">
@@ -75,25 +76,38 @@
     </section>
 
     <section class="main-container mc-project">
-        <article class="box-article bx-p-1 ui-draggable ui-draggable-handle" id="draggable" style="position: relative;">
+        <!-- Flyers Window -->
+        <article class="box-article bx-p-1 ui-draggable ui-draggable-handle" id="flyers-window"
+            style="position: relative;">
             <article class="box-article-nav">
-                <img src="../images/book-cover.png" />
-                <span>National_Parks_Guide.png</span>
+                <img src="../images/tone.png" />
+                <span>Flyers/</span>
+                <button id="back-button" onclick="goBackToSelection()">Back</button>
+
             </article>
-            <article class="box-article-content">
-                <article><img alt="national-parks-1" src="../images/books/national-parks-1.jpg" /></article>
-                <article><img alt="national-parks-2" src="../images/books/national-parks-2.jpg" /></article>
+            <article class="box-article-content" id="flyers-content">
+                <!-- Program files for RAWSCAPE and WILDROOTS -->
+                <div class="program-file" ondblclick="loadContent('rawscape')">
+                    <img src="../images/file.png" height="40px" alt="RAWSCAPE Icon" />
+                    <span>RAWSCAPE</span>
+                </div>
+                <div class="program-file" ondblclick="loadContent('wildroots')">
+                    <img src="../images/file.png" alt="WILDROOTS Icon" />
+                    <span>WILDROOTS</span>
+                </div>
             </article>
         </article>
-        <article class="box-article bx-s-3 ui-draggable ui-draggable-handle" id="draggable" style="position: relative;">
+
+        <!-- Content Window for Flyers and Descriptions -->
+        <article class="box-article bx-s-3 ui-draggable ui-draggable-handle" id="content-window"
+            style="position: relative;">
             <article class="box-article-nav">
-                <img src="../images/book-cover.png" />
-                <span>Mountain_Explorations.mp4</span>
+                <img src="../images/tone.png" />
+                <span>Event_Description.pdf</span>
             </article>
-            <article class="box-article-content b-stp-noscroll">
-                <article><video autoplay="" loop="" muted="">
-                        <source src="../videos/mountain-trailer.mp4" type="video/mp4" />
-                    </video></article>
+            <article class="box-article-content" id="content-area">
+                <!-- Placeholder for dynamic content -->
+                <p>Double-click on an event file to view details here.</p>
             </article>
         </article>
     </section>
@@ -147,6 +161,87 @@
         });
     </script>
     <script src="../scripts/clock.js"></script>
+    <!-- FLYER UPDATE -->
+    <script>
+        function loadContent(event) {
+            const contentWindow = document.getElementById("content-area");
+            const flyersWindow = document.getElementById("flyers-content");
+
+            if (event === 'rawscape') {
+                contentWindow.innerHTML = `
+                    <h2>RAWSCAPE Workshop: Crafting the Untamed Digital Landscape</h2>
+            <p>Join us for <u>RAWSCAPE</u>, an interactive workshop that dives into the art of creating bold, unfiltered digital experiences. In a world where design often feels polished and predictable, RAWSCAPE invites participants to explore the raw, unrefined side of web development and design. This workshop will focus on embracing unconventional aesthetics, brutalist elements, and rugged interactivity to craft a digital landscape that resonates with authenticity and depth.</p>
+
+            <p>Through hands-on activities, you’ll learn techniques for building websites and applications that go beyond the typical design conventions—focusing instead on texture, shadow, and raw interactivity to create immersive, visceral experiences. From advanced animation techniques to the gritty power of brutalist design, RAWSCAPE is a workshop for those ready to push creative boundaries.</p>
+
+            <h3>What You’ll Experience:</h3>
+            <ul>
+                <li><strong>Design Unfiltered:</strong> Learn to strip back the layers of polished design to reveal a raw, untamed aesthetic.</li>
+                <li><strong>Interactive Landscapes:</strong> Use animation and interactive elements to guide users through immersive, story-driven digital environments.</li>
+                <li><strong>Brutalist Aesthetics:</strong> Discover how to incorporate stark, powerful elements that challenge traditional design comfort zones.</li>
+                <li><strong>Hands-On Creation:</strong> Walk away with a personalized project that reflects your own journey into the uncharted digital landscape.</li>
+            </ul>
+
+            <p>Prepare to go beyond the screen and into the raw beauty of digital design. This is RAWSCAPE—where creativity breaks free and the digital landscape becomes wild terrain.</p>
+                `;
+
+                flyersWindow.innerHTML = `
+                    <article><img alt="RAWSCAPE Flyer 1" src="../raw_scape_flyers/event_poster_1.jpg" /></article>
+                    <article><img alt="RAWSCAPE Flyer 2" src="../raw_scape_flyers/event_poster_2.jpg" /></article>
+                    <article><img alt="RAWSCAPE Flyer 3" src="../raw_scape_flyers/event_poster_3.jpg" /></article>
+                    <article><img alt="RAWSCAPE Flyer 4" src="../raw_scape_flyers/event_poster_4.jpg" /></article>
+                `;
+            } else if (event === 'wildroots') {
+                contentWindow.innerHTML = `
+                   <h2>WILDROOTS – Embracing the Foundations of Raw Digital Design</h2>
+    <p>Dive into the unfiltered world of digital design with WILDROOTS, an immersive workshop dedicated to exploring the bold, raw aesthetics of brutalist web design. In an era where polished, predictable interfaces dominate, WILDROOTS challenges participants to strip back the layers, uncovering the core principles of a design approach that thrives on simplicity, rugged beauty, and unconventional layouts. This workshop is for those who dare to go beyond the norms, embracing the untamed side of digital creativity.</p>
+
+    <p>Guided by seasoned designers and developers, attendees will learn to create powerful, stripped-down layouts that captivate through minimalism and stark contrasts. From manipulating typography as a primary design tool to crafting interactive elements that breathe life into bare-bones structures, participants will engage in a hands-on experience that redefines what digital design can be. Each activity is crafted to deepen your understanding of brutalist aesthetics, giving you the tools to craft raw digital landscapes that challenge, engage, and captivate.</p>
+
+    <h3>What You’ll Experience:</h3>
+    <ul>
+        <li><strong>Foundations of Brutalism:</strong> Explore the key elements that define brutalist design and discover how simplicity can create impact.</li>
+        <li><strong>Interactive Minimalism:</strong> Experiment with animations and interactive elements to bring depth to minimalist designs.</li>
+        <li><strong>Typography as Design:</strong> Learn to use typography not just as text, but as a visual experience that defines the space.</li>
+        <li><strong>Live Project Creation:</strong> By the end of the day, create a unique, brutalist-inspired one-page site that embodies the untamed principles of WILDROOTS.</li>
+    </ul>
+
+    <p>Prepare to step outside the confines of conventional design, exploring a rugged approach that embraces authenticity and raw beauty. This is WILDROOTS—where digital design meets the bold spirit of the wilderness.</p>
+                `;
+
+                flyersWindow.innerHTML = `
+                    <article><img alt="WILDROOTS Flyer 1" src="../wild_roots/event_poster_1.jpg" /></article>
+                    <article><img alt="WILDROOTS Flyer 2" src="../wild_roots/event_poster_2.jpg" /></article>
+                    <article><img alt="WILDROOTS Flyer 3" src="../wild_roots/event_poster_3.jpg" /></article>
+                `;
+            }
+        }
+    </script>
+
+    <!-- BACK BUTTON -->
+    <script>
+        function goBackToSelection() {
+            const contentWindow = document.getElementById("content-area");
+            const flyersWindow = document.getElementById("flyers-content");
+
+            // Reset the content window to the initial message or placeholder
+            contentWindow.innerHTML = `
+        <p>Double-click on an event file to view details here.</p>
+    `;
+
+            // Reset the flyers window to show both program file icons
+            flyersWindow.innerHTML = `
+         <div class="program-file" ondblclick="loadContent('rawscape')">
+                    <img src="../images/file.png" height="40px" alt="RAWSCAPE Icon" />
+                    <span>RAWSCAPE</span>
+                </div>
+                <div class="program-file" ondblclick="loadContent('wildroots')">
+                    <img src="../images/file.png" alt="WILDROOTS Icon" />
+                    <span>WILDROOTS</span>
+                </div>
+    `;
+        }
+    </script>
 </body>
 
 </html>
