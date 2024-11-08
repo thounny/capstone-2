@@ -201,7 +201,7 @@ function openEvent(eventId) {
 - **JavaScript**: Functionality, interactivity, and data handling for the different pages.
 - **jQuery UI**: Making windows draggable and creating an OS-inspired feel.
 - **Google Fonts**: Custom typography with the "Inter" font for a modern aesthetic. Also includes "Helvetica Neue" (**GOATED FONT**).
-- **GIFs**: Nostalgic and kawaii GIFs to enhance the retro vibe of the project.
+- **GIFs**: Nostalgic and dope GIFs to enhance the retro vibe of the project.
 
 ---
 
