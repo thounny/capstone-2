@@ -237,6 +237,6 @@ Feel free to explore the project and leave feedback on the Guestbook page. Enjoy
 
 
 
-
+## PAGE VISITS:
 
 ![counter](https://count.getloli.com/@thounny?name=thounny&theme=booru-koe&padding=7&offset=0&align=top&scale=1&pixelated=1&darkmode=auto)
