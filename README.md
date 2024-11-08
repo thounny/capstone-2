@@ -104,6 +104,8 @@ const filterParks = () => {
 
 ### 2. Mountains Page - Sunrise and Sunset Info
 
+Shows local sunrise and sunset times for a selected mountain. Fetches sunrise and sunset times from an external API based on the mountain's latitude and longitude. Converts the 12-hour times received to UTC format, then to Eastern Standard Time (EST).Displays the formatted times in the `mountainInfoContainer` for user-friendly viewing.
+
 ```javascript
 const displaySunriseSunset = async (lat, lng) => {
   try {
