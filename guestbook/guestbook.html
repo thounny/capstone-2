@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guestbook</title>
+    <!-- GOOGLE FONT -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet">
+    <link rel="shortcut icon" href="../images/tone.png" type="image/x-icon">
+    <link href="../css/main.css" rel="stylesheet">
+    <style>
+        /* Guestbook Styling */
+        .guestbook-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .guestbook-form label {
+            font-size: 1.2em;
+            color: #FF1493;
+            margin-top: 15px;
+        }
+
+        .guestbook-form input[type="text"],
+        .guestbook-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 2px solid #FFB6C1;
+            border-radius: 10px;
+            background-color: #FFF0F5;
+            font-family: 'Inter', sans-serif;
+            color: #333;
+        }
+
+        .guestbook-form textarea {
+            resize: none;
+            height: 100px;
+        }
+
+        .guestbook-form button {
+            background-color: #FF69B4;
+            color: #FFF;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            margin-top: 20px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .guestbook-form button:hover {
+            background-color: #FF1493;
+        }
+
+        .thank-you {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        .thank-you img {
+            width: 50px;
+            height: auto;
+        }
+
+        .box-article-content {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a class="main-button w98-b bsi" href="../index.html"><img src="../images/tone.png" /><span>Start</span></a>
+            <article class="nav-social">
+                <div class="w98-separator-1"></div>
+                <div class="w98-separator-2"></div>
+                <section class="nav-rs-btn-container">
+                    <article class="nav-rs-btn"><a href="https://thounny.beehiiv.com/subscribe" target="_blank"><img
+                                src="../images/Vegetto_Rests.gif" /></a></article>
+                    <article class="nav-rs-btn"><a href="https://github.com/thounny" target="_blank"><img
+                                src="../images/github.svg" /></a></article>
+                    <article class="nav-rs-btn"><a href="https://www.linkedin.com/in/thounny/" target="_blank"><img
+                                src="../images/linkedin.png" /></a></article>
+                </section>
+                <div class="w98-separator-1"></div>
+                <div class="w98-separator-2"></div>
+            </article>
+
+            <!-- TASKBAR ICONS -->
+            <a class="main-button w98-b bsi" href="../national_parks/national_parks.html"><img
+                    src="../images/nature_tour.gif" /><span>National Parks</span></a>
+            <a class="main-button w98-b bsi" href="../mountains/mountains.html"><img
+                    src="../images/mountainsnowglobe.gif" /><span>Mountains</span></a>
+            <a class="main-button w98-b bsi" href="../photos/photos.html"><img
+                    src="../images/UPDATED.gif" /><span>Photos</span></a>
+            <a class="main-button w98-b bsi" href="../books/books.html"><img
+                    src="../images/books.gif" /><span>Books</span></a>
+            <a class="main-button w98-b bsi" href="../events/events.html"><img
+                    src="../images/globe_anime.gif" /><span>Events</span></a>
+            <a class="main-button w98-b bsi" href="../about/about.html"><img
+                    src="../images/anime.gif" /><span>About</span></a>
+            <a class="main-button w98-b bsi w98-b-reverse" href="../guestbook/guestbook.html"><img
+                    src="../images/guestbook.gif" /><span>Guestbook</span></a>
+
+            <div class="button-empty"></div>
+            <span class="main-button w98-cl" id="live-est-clock"></span>
+        </nav>
+    </header>
+
+    <section class="sidebar-container">
+        <div class="sc-logo-cont">
+            <img src="../images/myguestbook.gif" alt="Sign my guestbook!" />
+        </div>
+        <section class="sidebar-cta">
+            <a class="sidebar-cta-button" href="../gallery/gallery.html"><span><u>G</u>allery</span></a>
+            <a class="sidebar-cta-button" href="../index.html"><span><u>N</u>ext</span></a>
+        </section>
+        <div class="sc-separator"></div>
+        <span class="sc-text">
+            We’d love to hear your feedback on <b><u>Enjoy the Outdoors</u></b>. Feel free to leave a sweet message
+            below to share your thoughts and love!
+        </span>
+    </section>
+
+    <section class="main-container mc-project">
+        <article class="box-article bx-p-1 ui-draggable ui-draggable-handle" id="draggable" style="position: relative;">
+            <article class="box-article-nav">
+                <img src="../images/tone.png" />
+                <span>Guestbook.pdf</span>
+            </article>
+            <article class="box-article-content about-project-overview">
+                <h2>♡ Guestbook ♡</h2>
+                <p>Leave a message below to let me know what you think about the project!</p>
+                <form class="guestbook-form" onsubmit="return saveFeedback()">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Your name here..." required>
+
+                    <label for="message">Your Feedback:</label>
+                    <textarea id="message" name="message" placeholder="Type your message..." required></textarea>
+
+                    <button type="submit">♡ Send Love ♡</button>
+                </form>
+                <div class="thank-you">
+                    <img src="../images/thanks.gif" alt="thank you!">
+                </div>
+            </article>
+        </article>
+    </section>
+
+    <div class="mobile-popup">
+        <article class="box-article bx-m-1 ui-draggable ui-draggable-handle">
+            <article class="box-article-nav">
+                <img src="../images/error_alert.gif" />
+                <span>Error.svg</span>
+            </article>
+            <article class="box-article-content b-stp-noscroll b-stp-padding">
+                <section class="bx-error">
+                    <article class="error-icon-text">
+                        <img src="../images/error_alert.gif" />
+                        <img src="../images/error.gif" />
+                    </article>
+                    <span>This page does not work<br />on mobile :(</span>
+                    <span>-&gt; visit on Desktop please</span>
+                </section>
+            </article>
+        </article>
+    </div>
+
+    <section class="container-drag-limit" id="drag-limit"></section>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    <script>
+        jQuery(function ($) {
+            $('.box-article').draggable({ containment: "#drag-limit", scroll: false, multiple: true });
+        });
+    </script>
+    <script src="../scripts/clock.js"></script>
+
+    <script>
+        function saveFeedback() {
+            const name = document.getElementById('name').value;
+            const message = document.getElementById('message').value;
+
+            if (name && message) {
+                alert(`Thank you, ${name}! Your message: "${message}" has been received.`);
+            } else {
+                alert('Please fill out all fields.');
+            }
+            return false; // Prevent form submission for demo
+        }
+    </script>
+</body>
+
+</html>
