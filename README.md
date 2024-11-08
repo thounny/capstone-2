@@ -220,6 +220,9 @@ function openEvent(eventId) {
 
 ---
 
+For licensing information, please see the [LICENSE file](./LICENSE) in the root folder.
+
+
 ## Author
 
 ![Logo](./assets/index_dwn.gif)
