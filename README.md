@@ -9,7 +9,6 @@ Welcome to my project for Capstone 2, **Enjoy the Outdoors**, a retro-inspired d
 - [Code Highlights](#code-highlights)
 - [Technologies Used](#technologies-used)
 - [Setup](#setup)
-- [Future Improvements](#future-improvements)
 - [Credits](#credits)
 
 ---
@@ -216,13 +215,6 @@ function openEvent(eventId) {
    cd capstone-2
    ```
 3. Open `index.html` in your browser to view the project.
-
----
-
-## Future Improvements
-- **User Authentication**: Allow users to save their favorite parks and mountains.
-- **Enhanced Gallery Features**: Add the ability to set wallpapers as backgrounds and more customization.
-- **Real-Time Event Updates**: Integrate a backend to dynamically update events and photos.
 
 ---
 
